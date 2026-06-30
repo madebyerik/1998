@@ -8,18 +8,20 @@ import UsersIcon from "./assets/images/icons/users.png";
 
 import "./LinksWindow.css";
 
+const SOCIAL_USERNAME = "madebyerik";
+
 const LINKS = [{
   icon: PaintIcon,
   label: "Dribbble",
-  link: "https://dribbble.com/erikdotdesign"
+  link: `https://dribbble.com/${SOCIAL_USERNAME}`
 },{
   icon: TerminalIcon,
   label: "Github",
-  link: "https://github.com/erikdotdesign"
+  link: `https://github.com/${SOCIAL_USERNAME}`
 },{
   icon: ToolsIcon,
   label: "Figma",
-  link: "https://figma.com/@erikdotdesign"
+  link: `https://figma.com/@${SOCIAL_USERNAME}`
 },{
   icon: UsersIcon,
   label: "LinkedIn",
