@@ -23,7 +23,7 @@ const MapsMenu = ({
   return (
     <Menu
       title={EPISODES[episode - 1]}
-      detail="( Only works while playing )"
+      detail="Only works while playing"
       handleBack={() => {
         dispatch({
           type: "OPEN_MENU",

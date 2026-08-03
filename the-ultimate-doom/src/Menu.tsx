@@ -6,6 +6,7 @@ const Menu = ({
   dispatch,
   title,
   detail,
+  detailNightmare,
   handleBack,
   onClose,
   children
@@ -13,6 +14,7 @@ const Menu = ({
   dispatch: (action: Action) => void;
   title: string;
   detail?: string;
+  detailNightmare?: string;
   handleBack?: () => void;
   onClose?: () => void;
   children?: React.ReactNode | React.ReactNode[];
@@ -55,9 +57,17 @@ const Menu = ({
         </button>
       </div>
       <div className="c-menu__body">
-        {detail && (
-          <span className="c-menu__detail">{detail}</span>
-        )}
+        {
+          (detail || detailNightmare) &&
+          <div className="c-menu__details">
+            {detail && (
+              <span className="c-menu__detail">{detail}</span>
+            )}
+            {detailNightmare && (
+              <span className="c-menu__detail c-menu__detail--nightmare">{detailNightmare}</span>
+            )}
+          </div>
+        }
         {children}
       </div>
     </div>

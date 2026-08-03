@@ -45,7 +45,7 @@ const ControlsMenu = ({
   return (
     <Menu
       title="Controls"
-      detail="( Game save/load not supported )"
+      detail="Game save/load not supported"
       dispatch={dispatch}>
       <div className="c-menu__text-block">
         {

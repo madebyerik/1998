@@ -40,7 +40,8 @@ const CheatsMenu = ({
   return (
     <Menu
       title="Cheats"
-      detail="( Only works while playing )"
+      detail="Only works while playing"
+      detailNightmare="Unavailable in Nightmare difficulty"
       dispatch={dispatch}>
       <div className="c-button-group c-button-group--fill c-button-group--column">
         {

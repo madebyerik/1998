@@ -76,7 +76,7 @@ const MusicMenu = ({
   return (
     <Menu
       title="Music"
-      detail="( Only works while playing )"
+      detail="Only works while playing"
       dispatch={dispatch}>
       <div className="c-button-group c-button-group--fill c-button-group--column">
         {
