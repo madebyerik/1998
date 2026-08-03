@@ -33,7 +33,7 @@ const PowerUpsMenu = ({
 }) => {
   return (
     <Menu
-      title="Power Ups (Temporary)"
+      title="Power Ups"
       detail="Only works while playing"
       detailNightmare="Unavailable in Nightmare difficulty"
       dispatch={dispatch}>
