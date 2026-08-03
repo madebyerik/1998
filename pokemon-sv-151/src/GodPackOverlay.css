@@ -1,0 +1,81 @@
+.c-god-pack-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 100;
+  overflow: hidden;
+  pointer-events: none;
+  isolation: isolate;
+}
+
+.c-god-pack-overlay__sheen {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.6) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-25deg);
+    transition: none;
+    animation: sheen 3s infinite ease-in-out;
+  }
+}
+
+.c-god-pack-overlay__border {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  isolation: isolate;
+  animation: fade-in 0.25s linear;
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    inset: -1em;
+    border: solid 1.5em;
+
+    border-image: conic-gradient(
+      from var(--portal-angle),
+      #b38728, #fbf5b7, #dda735, #fbf5b7, #b38728
+    ) 1;
+
+    filter: blur(0.15em);
+    animation: portal-spin 4s linear infinite;
+  }
+}
+
+@property --portal-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes portal-spin {
+  to { --portal-angle: 1turn; }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes sheen {
+  0% {
+    left: -100%;
+  }
+  30%, 100% { 
+    left: 150%;
+  }
+}

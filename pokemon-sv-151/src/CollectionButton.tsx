@@ -1,5 +1,6 @@
 import { a, useTransition, to } from "@react-spring/web";
 import { Action, State } from "./reducer";
+import { getPackCards } from "./selectors";
 import PokeBall from "./svgs/pokeball.svg?react"
 import Button from "./Button";
 
@@ -25,12 +26,18 @@ const CollectionButton = ({
     <a.div style={style}>
       <Button
         modifier={["icon", "circle"]}
-        onClick={() =>
+        onClick={() => {
+          if (state.packs.godPackEnabled) {
+            dispatch({
+              type: "DISABLE_GOD_PACK"
+            });
+            dispatch({ type: "SET_NEW_CURRENT_PACK", cards: getPackCards(state) });
+          }
           dispatch({
             type: "TOGGLE_COLLECTION_OVERLAY",
             visible: true
-          })
-        }>
+          });
+        }}>
         <PokeBall />
       </Button>
     </a.div>
