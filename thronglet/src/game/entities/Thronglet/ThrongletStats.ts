@@ -67,7 +67,10 @@ export class ThrongletStats {
 
     if (fed <= 0) {
       this.thronglet.setAction("dead");
-      EventBus.emit("thronglet-died");
+
+      this.thronglet.appearance.playTemporaryAnimation("thronglet_death", () => {
+        EventBus.emit("thronglet-died");
+      });
 
       if (!this.thronglet.data.get("death")) {
         const THREE_DAYS_MS = 3 * 24 * 60 * 60 * 1000;

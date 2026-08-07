@@ -53,6 +53,7 @@ export class ThrongletAppearance {
 
   playTemporaryAnimation(key: string, onComplete?: () => void) {
     this.temporaryAnimation = true;
+    this.currentKey = key;
     this.thronglet.play(key, true);
 
     const handler = (anim: Phaser.Animations.Animation, frame: Phaser.Animations.AnimationFrame) => {

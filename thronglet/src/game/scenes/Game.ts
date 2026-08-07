@@ -76,6 +76,21 @@ export class Game extends Phaser.Scene {
     this.createUI();
   }
 
+  private createStarField() {
+    const stars = this.add.graphics();
+
+    for (let i = 0; i < 120; i++) {
+      const brightness = Phaser.Math.FloatBetween(0.45, 1);
+
+      stars.fillStyle(0xffffff, brightness);
+      stars.fillCircle(
+        Phaser.Math.Between(0, this.scale.width),
+        Phaser.Math.Between(0, this.scale.height),
+        Phaser.Math.FloatBetween(0.5, 1.5)
+      );
+    }
+  }
+
   private handleGameOver() {
     this.gameOverModal.show();
   }
@@ -83,6 +98,7 @@ export class Game extends Phaser.Scene {
   create() {
     registerThrongletAnimations(this);
     registerItemAnimations(this);
+    this.createStarField();
     createIsoMap(this);
     if (this.registry.get("initialState")) {
       this.spawnThronglet();
