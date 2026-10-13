@@ -6,6 +6,7 @@ import BioWindow from './BioWindow';
 import DoomWindow from "./DoomWindow";
 import ThrongletWindow from "./ThrongletWindow";
 import PokemonWindow from "./PokemonWindow";
+import AirJordanWindow from "./AirJordanWindow";
 import LinksWindow from './LinksWindow';
 import RedDragon from './RedDragon';
 import Clippy from "./Clippy";
@@ -32,6 +33,7 @@ const Desktop = () => {
         <DoomWindow />
         <ThrongletWindow />
         <PokemonWindow />
+        <AirJordanWindow />
         <Clippy />
       </div>
     </div>

@@ -7,6 +7,7 @@ import LinkIcon from "./assets/images/icons/link.png";
 import DoomIcon from "./assets/images/icons/doom.png";
 import ThrongletIcon from "./assets/images/icons/thronglet.png";
 import PokemonIcon from "./assets/images/icons/pokemon-sv-151.png";
+import AirJordanIcon from "./assets/images/icons/air-jordan-1.png";
 
 const DESKTOP_ITEMS = [{
   icon: NoteIcon,
@@ -32,6 +33,11 @@ const DESKTOP_ITEMS = [{
   icon: PokemonIcon,
   label: "Pokemon",
   windowType: "pokemon",
+  size: [509, 595]
+},{
+  icon: AirJordanIcon,
+  label: "AJ1",
+  windowType: "air-jordan-1",
   size: [509, 595]
 }];
 
