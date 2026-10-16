@@ -9,7 +9,7 @@ import "./Clippy.css";
 const CLIPPY_TIPS = [
   "Hey! Welcome to Erik's portfolio. I’d start with his bio—it’s a good intro!",
   "Want to see the magic behind the scenes? Links let you explore his designs (Dribbble), code (GitHub), plugins & widgets (Figma), and LinkedIn for the professional scoop.",
-  "Feeling curious? Click Doom, Thronglet, or Pokemon for interactive demos!"
+  "Feeling curious? Click Doom, Thronglet, Pokemon, or AJ1 for interactive demos!"
 ];
 
 const Clippy = () => {
