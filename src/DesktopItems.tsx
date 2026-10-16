@@ -30,14 +30,14 @@ const DESKTOP_ITEMS = [{
   windowType: "thronglet",
   size: [509, 595]
 },{
-  icon: PokemonIcon,
-  label: "Pokemon",
-  windowType: "pokemon",
-  size: [509, 595]
-},{
   icon: AirJordanIcon,
   label: "AJ1",
   windowType: "air-jordan-1",
+  size: [509, 595]
+},{
+  icon: PokemonIcon,
+  label: "Pokemon",
+  windowType: "pokemon",
   size: [509, 595]
 }];
 
